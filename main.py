@@ -1,6 +1,6 @@
 # Definimos la lista de adyacencia
 graph = {
-    'A': {'B': 5, 'C': 6},
+    'A': {'B': 5, 'C': 2},
     'B': {'C': 3, 'D': 1},
     'C': {'D': 2},
     'D': {}
@@ -24,7 +24,7 @@ def shortest_path(graph, start, end):
             {node: distances[node] for node in graph if node not in visited},
             key=distances.get
         )
-        #aqui
+        
         visited.add(current_node)
         if current_node == end:
             break
